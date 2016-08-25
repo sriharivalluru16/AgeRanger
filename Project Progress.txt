@@ -1,0 +1,16 @@
+I was occupied with Major Sitecore release so could not get much time to work on the test.
+However,I am pusing the changes that I have implemented so far.
+
+Will try to work on the test cases in the next availble time slot.
+
+Note: As I could not install SQLite on my office laptop due to some security issues, system does not allow me to install so used SQL Server.
+
+
+Not included:
+1. Authentication
+2. Authorization
+3. Logging
+4. Test cases
+
+To Run the application:
+1. Make sure the Web API url of your hosting server is added to the WebApiConfig file.

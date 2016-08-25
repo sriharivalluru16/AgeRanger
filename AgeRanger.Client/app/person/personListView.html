@@ -1,0 +1,40 @@
+﻿<div class="panel panel-primary">
+    <div class="panel panel-heading">
+       Person List
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+                <input type="text" class="form-control" placeholder="Search person" ng-model="searchcriteria">
+
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-default">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Age Group</th>
+                <th>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-if="noRecords"><td colspan="4">No records to be shown.</td></tr>
+                <tr ng-repeat="person in persons | filter:searchcriteria">
+                    <td>{{person.firstName}} {{person.lastName}}</td>
+                    <td>{{person.age}}</td>
+                    <td><span ng-repeat="str in person.ageGroups">{{str}}{{$last ? '' : ', '}} </span></td>
+                    <td>
+                        <a class="btn btn-primary"
+                           ui-sref="personEdit({id: person.id})">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
