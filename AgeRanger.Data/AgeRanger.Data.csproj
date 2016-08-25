@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BootstrapData\AgeGroupDataInitializer.cs" />
     <Compile Include="Contracts\IBetweenMinMaxRule.cs" />
     <Compile Include="Contracts\IRule.cs" />
     <Compile Include="Contracts\IRuleResolver.cs" />

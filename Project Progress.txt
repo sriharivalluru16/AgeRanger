@@ -14,3 +14,6 @@ Not included:
 
 To Run the application:
 1. Make sure the Web API url of your hosting server is added to the WebApiConfig file.
+2. If using SQL Server - Run the following EF migration commands in Package Manager Console to add default AgeGroup reecords.Should be run only once
+	add-migration initial -ignorechanges
+	update-database
