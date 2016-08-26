@@ -14,6 +14,13 @@ Not included:
 
 To Run the application:
 1. Make sure the Web API url of your hosting server is added to the WebApiConfig file.
-2. If using SQL Server - Run the following EF migration commands in Package Manager Console to add default AgeGroup reecords.Should be run only once
-	add-migration initial -ignorechanges
-	update-database
+2. If using SQL Server - Run the following EF migration commands in Package Manager Console
+	EDIT THE SQL CONNEECTION STRING ACCORDINGLY IN THE CONFIGS
+	IF DB DOES NOT EXIST :CODE FIRST
+		enable-migrations -StartUpProjectName AgeRanger.Data -Force
+		Add-Migration StartUp -ConfigurationTypeName AgeGroupDataInitializer -startupprojectname AgeRanger.Data
+		Update-Database -ConfigurationTypeName AgeGroupDataInitializer -startupprojectname AgeRanger.Data -verbose
+
+	IF DB Schema EXIST WITH NO REECORDS IN AGE GROUP TABLE - RUN ONLY ONCE OTHERWISE DUPLICATE RECORDS WILL BE CREEATED
+		Update-Database -ConfigurationTypeName AgeGroupDataInitializer -startupprojectname AgeRanger.Data -verbose
+

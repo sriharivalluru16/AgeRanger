@@ -18,7 +18,8 @@
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
       modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-      
+      modelBuilder.Entity<Person>();
+      modelBuilder.Entity<AgeGroup>();  
     }
   }
 }
