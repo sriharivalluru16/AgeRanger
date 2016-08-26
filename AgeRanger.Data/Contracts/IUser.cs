@@ -2,6 +2,6 @@
 {
   public interface IUser
   {
-    int Age { get; set; }
+    long Age { get; set; }
   }
 }

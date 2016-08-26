@@ -6,10 +6,11 @@ angular
         "person", "$scope", "$state", function PersonEditCtrl(person, $scope, $state) {
             
             $scope.person = person;
-            if ($scope.person && $scope.person.id) {
-                $scope.title = "Edit Person Details:" + $scope.person.firstName;
+            if ($scope.person && $scope.person.id && person.id !== 0) {
+                $scope.title = "Edit Details of " + $scope.person.firstName  + " " + $scope.person.lastName;
             } else {
                 $scope.title = "New Person";
+                $scope.person.age = "";
             }
 
             $scope.submit = function () {

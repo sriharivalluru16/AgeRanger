@@ -1,6 +1,5 @@
 ﻿namespace AgeRanger.Api.Controllers
 {
-  using System.Web.Http.Cors;
   using AgeRanger.Data.Contracts;
   using AgeRanger.Data.Models;
   using System.Collections.Generic;

@@ -7,14 +7,14 @@
   [KnownType(typeof(BetweenMinMaxRule<>))]
   public class BetweenMinMaxRule<T> : IBetweenMinMaxRule<T> where T : IUser
   {
-    private readonly Func<int, int, int, bool> betweenMinMaxRule = (min, max, input) => input >= min && input < max;
+    private readonly Func<long, long, long, bool> betweenMinMaxRule = (min, max, input) => input >= min && input < max;
     public string Name { get; set; }
 
     public bool IsSatisfied(T type)
     {
       return this.betweenMinMaxRule(this.Min, this.Max, type.Age);
     }
-    public int Min { get; set; }
-    public int Max { get; set; }
+    public long Min { get; set; }
+    public long Max { get; set; }
   }
 }

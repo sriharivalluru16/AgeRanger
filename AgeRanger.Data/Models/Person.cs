@@ -7,7 +7,7 @@
 
   public class Person :IUser
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [Required(AllowEmptyStrings = false,ErrorMessage ="First name is required." )]
     [StringLength(120,ErrorMessage = "First name length should not exceed 120 chars.")]
@@ -19,7 +19,7 @@
 
     [Required(ErrorMessage = "Age is required.")]
     [RegularExpression(pattern:"^(\\d+)$",ErrorMessage = "Age must be a number.")]
-    public int Age { get; set; }
+    public long Age { get; set; }
 
     [NotMapped]
     public IEnumerable<string> AgeGroups { get; set; }

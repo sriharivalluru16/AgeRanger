@@ -24,7 +24,7 @@ namespace AgeRanger.Data.Repositories
       return this.DbSet;
     }
 
-    public virtual T GetById(int id)
+    public virtual T GetById(long id)
     {
       return this.DbSet.Find(id);
     }
@@ -67,7 +67,7 @@ namespace AgeRanger.Data.Repositories
 
     }
 
-    public virtual void Delete(int id)
+    public virtual void Delete(long id)
     {
       var entity = this.GetById(id);
       if (entity == null) return;

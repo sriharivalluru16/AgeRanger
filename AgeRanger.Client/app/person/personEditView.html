@@ -1,6 +1,6 @@
 ﻿<form class="panel panel-primary" name="personForm" novalidate>
     <div class="panel-heading" style="font-size: large">
-        Basic Person Information
+        {{title}}
     </div>
     <div class="panel-body">
         <div class="form-group row"
@@ -57,7 +57,7 @@
                 <input type="number" class="form-control"
                        id="inputpersonAge"
                        name="inputpersonAge"
-                       ng-model="person.age" max="999999" min="0">
+                       ng-model="person.age" max="999999" min="0" required placeholder="Age">
             </div>
             <span class="help-block has-error">
                 <span ng-show="personForm.inputpersonAge.$error.required">

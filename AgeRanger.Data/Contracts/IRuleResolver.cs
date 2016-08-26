@@ -7,10 +7,4 @@ namespace AgeRanger.Data.Contracts
   {
     List<IRule<T>> MatchingRules(T type);
   }
-  
-
-
-
-
-
 }

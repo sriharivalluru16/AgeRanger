@@ -1,16 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AgeRanger.Data.Models
+﻿namespace AgeRanger.Data.Models
 {
+  using System;
+
   public class AgeGroup
   {
-    public int Id { get; set; }
-    public int? MinAge { get; set; }
-    public int? MaxAge { get; set; }
+    private long? maxAge;
+    private long? minAge;
+    public long Id { get; set; }
+    public long? MinAge
+    {
+      get
+      {
+        return this.minAge;
+      }
+      set
+      {
+        object x = value;
+        this.minAge = x != DBNull.Value ? value : null;
+      }
+    }
+    public long? MaxAge
+    {
+      get
+      {
+        return this.maxAge;
+      }
+      set
+      {
+        object x = value;
+        this.maxAge = x != DBNull.Value ? value : null;
+      }
+    }
     public string Description { get; set; }
   }
 }

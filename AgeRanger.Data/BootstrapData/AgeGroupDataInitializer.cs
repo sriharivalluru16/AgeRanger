@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AgeRanger.Data.BootstrapData
+﻿namespace AgeRanger.Data.BootstrapData
 {
-  using System.Data.Entity;
   using System.Data.Entity.Migrations;
+  using System.Collections.Generic;
+
   using AgeRanger.Data.Models;
 
   internal class AgeGroupDataInitializer : DbMigrationsConfiguration  <AgeRangerDbContext>
