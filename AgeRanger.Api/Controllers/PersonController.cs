@@ -30,6 +30,11 @@
     // GET api/person/5
     public IHttpActionResult Get(int id)
     {
+      if (id == 0)
+      {
+        return this.Ok(new Person());
+      }
+
       var person = Uow.Persons.GetById(id);
 
       if (person == null)
