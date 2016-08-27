@@ -57,6 +57,11 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\Controllers\PersonControllerTest.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Data\Helpers\AgeRangerUowTest.cs" />
     <Compile Include="Data\Helpers\RepositoryFactoriesTest.cs" />
@@ -73,7 +79,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
     <Folder Include="Client\" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +86,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AgeRanger.Api\AgeRanger.Api.csproj">
+      <Project>{f9cece3b-1940-4054-bed7-c44270f0faf7}</Project>
+      <Name>AgeRanger.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AgeRanger.Data\AgeRanger.Data.csproj">
       <Project>{9d50ce8b-76e7-45cc-bca3-38063c4697ca}</Project>
       <Name>AgeRanger.Data</Name>

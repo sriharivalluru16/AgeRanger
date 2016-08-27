@@ -4,6 +4,8 @@
   using AgeRanger.Data.Models;
   using System.Collections.Generic;
   using System.Linq;
+  using System.Net;
+  using System.Net.Http;
   using System.Web.Http; 
 
   public class PersonController : BaseApiController
@@ -32,24 +34,27 @@
 
       if (person == null)
       {
-        return this.Ok(new Person());
+        return this.NotFound();
       }
      
       return this.Ok(person);
     }
 
     // POST api/person
-    public void Post([FromBody] Person person)
+    public HttpResponseMessage Post([FromBody] Person person)
     {
       if (person.Id != 0)
       {
         this.Uow.Persons.Update(person);
+        this.Uow.Commit();
+        return this.Request.CreateResponse(HttpStatusCode.OK, person);
       }
       else
       {
         this.Uow.Persons.Add(person);
+        this.Uow.Commit();
+        return this.Request.CreateResponse(HttpStatusCode.Created, person);
       }
-      this.Uow.Commit();
     }
   }
 }
