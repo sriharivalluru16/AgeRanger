@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Developer Notes", "Develope
 		Project Progress.txt = Project Progress.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRanger.Specs", "AgeRanger.Specs\AgeRanger.Specs.csproj", "{BD0D9DCF-51FB-4E9C-9FA1-475018052D00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRanger.Integration.Tests.Specs", "AgeRanger.Specs\AgeRanger.Integration.Tests.Specs.csproj", "{BD0D9DCF-51FB-4E9C-9FA1-475018052D00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRanger.UnitTests", "AgeRanger.UnitTests\AgeRanger.UnitTests.csproj", "{3A9A9D86-09DE-4FCC-B980-6555B5D23107}"
 EndProject
