@@ -27,9 +27,7 @@ namespace AgeRanger.Data.Helpers
     public RepositoryFactories()
     {
       this._repositoryFactories = this.GetArFactories();
-    }
-
-
+    }  
 
    
     public RepositoryFactories(IDictionary<Type, Func<DbContext, object>> factories)

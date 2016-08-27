@@ -4,13 +4,15 @@ namespace AgeRanger.Data.Helpers
   using System.Collections.Generic;
   using System.Data.Entity;
   using AgeRanger.Data.Contracts;
+  using System.Linq;
 
   public class RepositoryProvider : IRepositoryProvider
   {
-    private RepositoryFactories _repositoryFactories;
+    private RepositoryFactories _repositoryFactories; 
+
+    protected Dictionary<Type, object> Repositories { get; private set; }
 
     public RepositoryProvider(RepositoryFactories repositoryFactories)
-    
     {
       this._repositoryFactories = repositoryFactories;
       this.Repositories = new Dictionary<Type, object>();
@@ -38,11 +40,7 @@ namespace AgeRanger.Data.Helpers
       // Not found or null; make one, add to dictionary cache, and return it.
       return this.MakeRepository<T>(factory, this.DbContext);
     }
-
-   
-    protected Dictionary<Type, object> Repositories { get; private set; }
-
-    
+      
     protected virtual T MakeRepository<T>(Func<DbContext, object> factory, DbContext dbContext)
     {
       var f = factory ?? this._repositoryFactories.GetRepositoryFactory<T>();

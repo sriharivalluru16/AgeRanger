@@ -23,6 +23,7 @@ angular
                 else
                     $scope.person.$save(function (data) {
                         $scope.person = {};
+                        $scope.personForm.$setPristine();
                         $scope.operationResult = "Person information updated successfully";
                     });
             }
