@@ -1,13 +1,20 @@
-I was occupied with Major Sitecore release so could not get much time to work on the test.
-However,I am pusing the changes that I have implemented so far.
-
-Will try to work on the test cases in the next availble time slot.
 
 Not included:
 1. Authentication
 2. Authorization
 3. Logging
-4. Test cases
+
+Technologies used:
+VS 2013
+C#
+Entity Framework
+SQLite/SQL Serverr
+Unity (IoC)
+WEB API
+Angular JS
+Bootstrap
+Spec Flow
+nUnit
 
 To Run the application:
 1. Make sure the Web API url of your hosting server is added to the WebApiConfig file.
@@ -20,6 +27,7 @@ To Run the application:
 
 	IF DB Schema EXIST WITH NO REECORDS IN AGE GROUP TABLE - RUN ONLY ONCE OTHERWISE DUPLICATE RECORDS WILL BE CREATED
 		Update-Database -ConfigurationTypeName AgeGroupDataInitializer -startupprojectname AgeRanger.Data -verbose
-3. Is using SQLite
+3. If using SQLite
 	Change the Data Source path to the location of AgeRange.db on the machine.
+
 
